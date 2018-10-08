@@ -8,7 +8,7 @@ description = "A Base theme for building full featured Hugo sites"
 homepage = "https://github.com/wikty/hugo-ananke-ext"
 tags = ["website", "starter", "responsive"]
 features = ["posts", "shortcodes"]
-min_version = 0.38
+min_version = 0.37
 
 [author]
   name = "Xiao Wenbin"
