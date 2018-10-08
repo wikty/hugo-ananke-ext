@@ -1,0 +1,6 @@
+{{/* only load JQuery Plugin QRcode generator in the page that enabled it */}}
+{{ if eq ($.Param "jquery_qrcode" | default false) true }}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js">
+</script>
+{{ end }}
+

@@ -1,0 +1,17 @@
+{{/* .Kind = "page" */}}
+{{ define "header" }}
+   {{/* We can override any block in the baseof file be defining it in the template */}}
+  {{ partial "posts/page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <div class="flex flex-wrap mt2 mw8 center justify-center">
+    <div class="pv5 ph4 mh2 w-7">
+      {{ partial "posts/article.html" . }}
+    </div>
+    {{/* remove sidebar */}}
+    {{/*<div class="ph3 mt2 mt6-ns mr4">
+      {{ partial "posts/menu-contextual.html" . }}
+    </div>*/}}
+  </div>
+{{ end }}

@@ -1,0 +1,31 @@
+[translations]
+other = "Translations"
+
+[wordCount]
+other = "There are {{ .WordCount }} words."
+
+[readingTime]
+one = "One minute read"
+other = "{{.Count}} minutes read"
+
+[Recent]
+other = "Recent"
+
+[readmore]
+other = "Read More..."
+
+[More]
+other = "More"
+
+[All]
+other = "All"
+
+[TOC]
+other = "TOC"
+
+[CONTENT]
+other = "Content"
+
+[Related]
+other = "Related"
+

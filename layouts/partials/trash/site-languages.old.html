@@ -1,0 +1,11 @@
+{{ if .Site.IsMultiLingual }}
+{{ $site_language := .Site.Language }}
+{{ $site_baseurl := .Site.BaseURL }}
+{{ range .Site.Languages }}
+  {{ if ne $site_language.Lang .Lang }}
+  <a href="{{ trim $site_baseurl '/' }}/{{ .Lang }}" class="link-transition link dib z-999 pt3 pt0-l mr2" title="{{ .Lang | upper }} Version">
+  {{ .Lang | upper }}
+  </a>
+  {{ end }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,14 @@
+<footer id="article-footer">
+  <div id="article-related" class="mv5 f6 gray nested-lh-copy bg-light-gray ph3 pv2 measure-wide-l">
+    {{ partial "posts/article-related.html" . }}
+  </div>
+  <div id="article-share" class="mv2">
+    {{ partial "social-share.html" . }}
+    {{ partial "qrcode-share.html" .}}
+  </div>
+  <div id="article-comment">
+    {{ template "_internal/disqus.html" . }}
+    {{/* for test */}}
+    {{/* partial "trash/disqus.html" . */}}
+  </div>
+</footer>

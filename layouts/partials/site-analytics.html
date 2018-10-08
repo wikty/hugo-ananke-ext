@@ -1,0 +1,5 @@
+{{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go */}}
+{{/* Require: .Site.GoogleAnalytics */}}
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+  {{ template "_internal/google_analytics_async.html" . }}
+{{ end }}

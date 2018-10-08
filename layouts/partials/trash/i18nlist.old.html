@@ -1,0 +1,10 @@
+{{ if .IsTranslated }}
+<h4>{{ i18n "translations" }}</h4>
+<ul>
+    {{ range .Translations }}
+    <li>
+        {{ .Lang }}: <a href="{{ .Permalink }}">{{ .Title }}{{ if .IsPage }} ({{ i18n "wordCount" . }} | {{ i18n "readingTime" .ReadingTime }}){{ end }}</a>
+    </li>
+    {{ end}}
+</ul>
+{{ end }}

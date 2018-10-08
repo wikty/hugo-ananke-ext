@@ -1,0 +1,65 @@
+#TableOfContents {
+  background-color: #f8f8f8;
+  padding: .5em;
+}
+
+#TableOfContents > ul {
+  list-style-type: none;
+}
+
+#TableOfContents li:not([class]) a {
+  text-decoration:none
+}
+
+#toc-all-taxonomies li:not([class]) a {
+  text-decoration:none
+}
+
+#toc-site-menus li:not([class]) a {
+  text-decoration:none
+}
+
+#social-share {
+    border: 1px;
+    margin: 5px;
+}
+
+#social-share a {
+    text-align: center;
+    text-decoration: none;
+    color: #495057;
+    margin: 3px;
+}
+
+/*social icons*/
+
+.facebook, .twitter, .instagram, .youtube, .github, .linkedin, .weibo {
+  fill: #BABABA;
+}
+.facebook:hover {
+  fill: #3b5998;
+}
+
+.twitter:hover {
+  fill: #1da1f2;
+}
+
+.instagram:hover {
+  fill: #e1306c;
+}
+
+.youtube:hover {
+  fill: #cd201f;
+}
+
+.github:hover {
+  fill: #6cc644;
+}
+
+.linkedin:hover {
+  fill: #0077b5;
+}
+
+.weibo:hover {
+  fill: #d8261f;
+}

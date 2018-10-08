@@ -1,0 +1,90 @@
+{{ if eq ($.Param "include_share" | default false) true }}
+  {{ $permalink := .Permalink }}
+  {{ $title := .Title }}
+<div id="social-share" class="fa-lg">
+  {{ if eq .Lang "zh-cn" }}  
+  <a title="分享到新浪微博" href="http://service.weibo.com/share/share.php?url={{ $permalink }}&title={{ $title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fab fa-weibo fa-inverse"></i>
+    </span>
+  </a>
+
+  <a title="分享到豆瓣" href="http://shuo.douban.com/!service/share?href={{ $permalink }}&name={{ $title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <span class="fa-layers-text fa-inverse" style="font-weight:600">豆</span>
+    </span>
+  </a>
+
+  <a title="分享到腾讯微博" href="http://share.v.t.qq.com/index.php?c=share&a=index&url={{ $permalink }}&title={{ $title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fab fa-tencent-weibo fa-inverse"></i>
+    </span>
+  </a>
+
+  <a title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{ $permalink }}&title={{ $title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fab fa-qq fa-inverse"></i>
+    </span>
+  </a>
+
+  <a title="分享到人人网" href="http://widget.renren.com/dialog/share?resourceUrl={{ $permalink }}&title={{ $title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fab fa-renren fa-inverse"></i>
+    </span>
+  </a>
+
+  <a title="分享到 GetPocket" href="http://getpocket.com/edit?url={{ $permalink }}&title={{ $title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fab fa-get-pocket fa-inverse"></i>
+    </span>
+  </a>
+
+  <a title="分享到 Google Plus" href="https://plus.google.com/share?url={{ $permalink }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fab fa-google-plus fa-inverse"></i>
+    </span>
+  </a>
+  {{ else }}
+  <a title="Scan QRCode" href="#" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fas fa-qrcode fa-inverse"></i>
+    </span>
+  </a>
+
+  <a title="Fackbook" href="http://www.facebook.com/sharer.php?src=bm&u={{ $permalink }}&t={{ $title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fab fa-facebook fa-inverse"></i>
+    </span>
+  </a>
+
+  <a title="Twitter" href="http://twitter.com/intent/tweet?url={{ $permalink }}&text={{ $title }}&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fab fa-twitter fa-inverse"></i>
+    </span>
+  </a>  
+
+  <a title="Google Plus" href="https://plus.google.com/share?url={{ $permalink }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fab fa-google-plus fa-inverse"></i>
+    </span>
+  </a>
+
+  <a title="GetPocket" href="http://getpocket.com/edit?url={{ $permalink }}&title={{ $title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+    <span class="fa-layers fa-fw">
+      <i class="fas fa-circle fa-lg"></i>
+      <i class="fab fa-get-pocket fa-inverse"></i>
+    </span>
+  </a>
+  {{ end }}
+{{ end }}

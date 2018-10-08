@@ -1,0 +1,30 @@
+[translations]
+other = "翻译"
+
+[wordCount]
+other = "这篇文章有 {{ .WordCount }} 个字"
+
+[readingTime]
+one = "大概需要阅读一分钟"
+other = "大概需要阅读 {{.Count}} 分钟"
+
+[Recent]
+other = "最近"
+
+[readmore]
+other = "更多..."
+
+[More]
+other = "更多"
+
+[All]
+other = "全部"
+
+[TOC]
+other = "目录"
+
+[CONTENT]
+other = "正文"
+
+[Related]
+other = "相关文章"

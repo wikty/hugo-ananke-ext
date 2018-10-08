@@ -1,0 +1,20 @@
+<section id="toc-all-taxonomies">
+  <ul class="menu">
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+      <li>
+        <a href="{{ "/" | relLangURL }}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
+        <ul class="sub-menu">
+          {{ range $term, $value := $taxonomy }}
+          <li><a href="{{ "/" | relLangURL }}{{ $taxonomyname | urlize }}/{{ $term | urlize }}">{{ $term }}</a></li>
+                {{/* Don't list content pages assigned with the taxonomy term */}}
+                {{/*<ul>
+                {{ range $value.Pages }}
+                    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                {{ end }}
+                </ul>*/}}
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+  </ul>
+</section>

@@ -1,0 +1,5 @@
+{{/* only load Devicons(http://vorillaz.github.io/devicons/) in the page that enabled it */}}
+{{ if eq ($.Param "devicons" | default false) true }}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" rel="stylesheet">
+{{ end }}
+

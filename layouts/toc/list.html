@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+      {{ .Content }}
+    </div>
+  </article>
+  <div class="mw8 center">
+    <h1>Taxonomy</h1>
+    {{ partial "toc/all-taxonomies.html" . }}
+    <h1>Menu</h1>
+    {{ partial "toc/site-menus.html" . }}
+  </div>
+{{ end }}

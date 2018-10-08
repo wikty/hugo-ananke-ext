@@ -1,0 +1,5 @@
+{{/* only load Twitter Bootstrap in the page that enabled it */}}
+{{ if eq ($.Param "bootstrap_js" | default false) true }}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js">
+</script>
+{{ end }}

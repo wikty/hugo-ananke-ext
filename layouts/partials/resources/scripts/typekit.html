@@ -1,0 +1,4 @@
+{{/* only load the typekit font in chinese version page */}}
+{{ if and (eq ($.Param "typekit" | default false) true) (not (len (findRE "^/en/" .URL))) }}
+    <script src="/js/load-typekit.js" async></script>
+{{ end }}

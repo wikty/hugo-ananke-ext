@@ -1,0 +1,13 @@
+{{/* load scripts on the bottom of html's body element */}}
+<!-- Please load the below libraries in the order, decause they have dependencies relationship -->
+{{ partial "resources/scripts/jquery.html" . }}
+
+{{ partial "resources/scripts/jquery.qrcode.html" . }}
+
+{{ partial "resources/scripts/popper.html" . }}
+
+{{ partial "resources/scripts/bootstrap.html" . }}
+<!-- end -->
+
+<script src="{{ "dist/app.bundle.js" | absURL }}"></script>
+<script src="{{ "js/custom.js" | absURL }}"></script>

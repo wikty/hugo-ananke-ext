@@ -1,0 +1,4 @@
+{{/* only load mathjax in the page that enabled it */}}
+{{ if eq ($.Param "mathjax" | default false) true }}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+{{ end }}

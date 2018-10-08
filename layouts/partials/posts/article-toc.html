@@ -1,0 +1,15 @@
+{{/* show a table of content for post when wordcount > 400 and include_toc set to true */}}
+{{/* if and (gt .WordCount 400) (.Params.include_toc) */}}
+{{ if .Params.include_toc }}
+<section id="article-toc">
+    <aside>
+        <header>
+        <!-- <h3>{{.Title}}</h3> -->
+        <h3>{{ i18n "TOC" . }}</h3>
+        <!-- <a href="#{{.Title | urlize}}"> -->
+        </header>
+        {{.TableOfContents}}
+    </aside>
+    <!-- <a href="#" id="toc-toggle"></a> -->
+</section>
+{{ end }}

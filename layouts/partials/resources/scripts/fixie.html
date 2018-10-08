@@ -1,0 +1,8 @@
+{{ if eq ($.Param "fixie" | default false) true }}
+<!-- html5shim and respond.js for fixing IE8 bugs to support HTML5 element and media queries -->
+<!-- Note: respond.js doesn't work by loading page via file:// protocol -->
+<!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+{{ end }}

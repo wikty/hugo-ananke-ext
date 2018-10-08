@@ -1,0 +1,5 @@
+{{/* only load Popper.js in the page that enabled it */}}
+{{ if eq ($.Param "popper" | default false) true }}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.min.js">
+</script>
+{{ end }}

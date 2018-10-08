@@ -1,0 +1,4 @@
+{{/* only load Simple Line Icons(http://simplelineicons.com/) in the page that enabled it */}}
+{{ if eq ($.Param "simplelineicons" | default false) true }}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+{{ end }}

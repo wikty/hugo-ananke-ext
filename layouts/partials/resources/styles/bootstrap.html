@@ -1,0 +1,4 @@
+{{/* only load Twitter Bootstrap in the page that enabled it */}}
+{{ if eq ($.Param "bootstrap_css" | default false) true }}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+{{ end }}

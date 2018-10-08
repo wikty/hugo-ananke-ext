@@ -1,0 +1,7 @@
+{{/* only load pangu.js in the page that enabled it */}}
+{{/* 自動替你在網頁中所有的中文字和半形的英文、數字、符號之間插入空白。 */}}
+{{ if and (eq ($.Param "pangu" | default false) true) (not (len (findRE "^/en/" .URL))) }}
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.3.0/pangu.min.js">
+</script>
+{{ end }}

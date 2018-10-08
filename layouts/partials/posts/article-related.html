@@ -1,0 +1,46 @@
+{{ $related :=  .Site.RegularPages.Related . }}
+{{ $related_posts_number := .Site.Params.related_posts_number }}
+{{ $currentPageUrl := .URL }}
+{{ with $related }}
+      <ul class="list dib ml0 pl0">
+        <li class="black dib mb2 mr2">
+          {{ i18n "Related" . }}:
+        </li>
+        {{ range (first $related_posts_number .) }}
+          {{ if ne .URL $currentPageUrl }}
+            <li class="mb2 mr3">
+              <a href="{{ .URL }}" class="link mid-gray dim">
+                 {{ .LinkTitle }}
+              </a>
+            </li>
+          {{ end }}
+        {{end}}
+      </ul>
+{{ end }}
+
+{{/* remove for now */}}
+{{ if 0 }}
+{{ $currentPageUrl := .URL }}
+{{ if .Params.tags }}
+  {{ $name := index .Params.tags 0 }}
+  {{ $name := $name | urlize }}
+  {{ $tags := index .Site.Taxonomies.tags $name }}
+  {{ $i := $tags | len }}
+  {{ if ge $i 2 }}
+      <ul class="list dib ml0 pl0">
+        <li class="black dib mb2 mr2">
+          {{ i18n "Related" . }}:
+        </li>
+        {{ range $tags.Pages }}
+          {{ if ne .URL $currentPageUrl }}
+            <li class="mb2 mr3">
+              <a href="{{ .URL }}" class="link mid-gray dim">
+                 {{ .LinkTitle }}
+              </a>
+            </li>
+          {{ end }}
+        {{end}}
+      </ul>
+  {{ end }}
+{{ end }}
+{{ end }}
